@@ -1,0 +1,78 @@
+/* ===========================================
+   LORE — Design tokens
+   Меняй значения ниже, чтобы поменять внешний вид
+   всего приложения разом.
+=========================================== */
+
+:root {
+  /* Шрифты — впиши сюда названия своих шрифтов.
+     Не забудь подключить их через <link> в index.html (Google Fonts или свои @font-face ниже) */
+  --font-display: "Fauna One", serif;    /* заголовки, крупный текст */
+  --font-body: "Montserrat", sans-serif; /* обычный текст, кнопки, инпуты */
+
+  /* Основные цвета фона/текста */
+  --color-bg: #0a0a0a;
+  --color-surface: #171717;      /* карточки, поля ввода */
+  --color-border: #262626;
+  --color-text: #f5f5f5;
+  --color-text-muted: #a3a3a3;
+  --color-text-faint: #737373;
+
+  /* Акцентный цвет (кнопки, активные вкладки) */
+  --color-accent: #fbbf24;
+  --color-accent-text: #0a0a0a;
+
+  /* Цвета редкости персонажей */
+  --rarity-common: #8a8f98;
+  --rarity-rare: #5b8def;
+  --rarity-epic: #a259e6;
+  --rarity-legendary: #e6b325;
+}
+
+/* Если используешь свой шрифт-файл, а не Google Fonts — раскомментируй и укажи путь:
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./fonts/MyCustomFont.woff2") format("woff2");
+  font-weight: 400 700;
+}
+*/
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+.btn-accent-solid {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.border-accent {
+  border-color: var(--color-accent);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--color-border);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+}

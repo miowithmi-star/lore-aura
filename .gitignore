@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Env / secrets (если когда-нибудь появятся отдельные .env файлы)
+.env
+.env.local
+
+# Logs
+*.log
+
+# Dependencies (на случай, если позже добавишь сборку/npm)
+node_modules/
